@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --first-interval: 1s;
+    --second-interval: 1.5s;
+    --thrid-interval: 2s;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(33, 0, 53);
+    height: 100vh;
+}
+
+.rope{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 8px;
+    background-color: rgb(77, 74, 72);
+}
+
+.light{
+    width: 20px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.red{
+    background-color: #a00404;
+    animation: red-light 2s infinite ease var(--first-interval);
+}
+
+.green{
+    background-color: #058d05;
+    animation: green-light 2s infinite ease var(--second-interval);
+}
+
+.blue{
+    background-color: #458ae6;
+    animation: blue-light 2s infinite ease var(--thrid-interval);
+}
+
+.utilities{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+}
+
+.input{
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border: 2px solid aliceblue;
+    outline: none;
+    padding: 0.25rem 1.5rem;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color:crimson;
+    color: aliceblue;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+
+.btn:hover{
+    color: crimson;
+    background-color: aliceblue;
+}
+
+.title{
+    text-align: center;
+    font-size: 7rem;
+    animation: white-light infinite ease 3s;
+    color: aliceblue;
+}
+
+.stop-animation{
+    animation-play-state: paused;
+}
+
+.play-animation{
+    animation-play-state: running;
+}
+
+@keyframes red-light {
+    0%{
+        box-shadow: 0 0 0px #a00404;
+    }
+    50%{
+        box-shadow: 0 0 40px #a00404;
+        filter: brightness(1.2);
+    }
+    100%{
+        box-shadow: 0 0 0px #a00404;
+    }
+}
+
+@keyframes green-light {
+    0%{
+        box-shadow: 0 0 0px #058d05;
+    }
+    50%{
+        box-shadow: 0 0 40px #058d05;
+        filter: brightness(1.2);
+    }
+    100%{
+        box-shadow: 0 0 0px #058d05;
+    }
+}
+
+@keyframes blue-light {
+    0%{
+        box-shadow: 0 0 0px #458ae6;
+    }
+    50%{
+        box-shadow: 0 0 40px #458ae6;
+        filter: brightness(1.2);
+    }
+    100%{
+        box-shadow: 0 0 0px #458ae6;
+    }
+}
+
+@keyframes white-light {
+    0%{
+        text-shadow: 0 0 0px aliceblue;
+    }
+    50%{
+        text-shadow: 0 0 10px aliceblue;
+    }
+    100%{
+        text-shadow: 0 0 0px aliceblue;
+    }
+}

@@ -1,0 +1,85 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    margin: 0;
+}
+
+.cards{
+    width: 90%;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 250px;
+    place-content: center;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__front,
+.card__back{
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #1f1f1f;
+}
+
+.card__front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__back{
+    background-color: brown;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card__back::after,
+.card__back::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(30deg);
+    opacity: .5;
+    background-color: #333;
+}
+
+.card__back::before{
+    transform: rotate(-30deg);
+}
+
+.card__front::after,
+.card__front::before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 5px;
+    background-color: #0303723a;
+}
+
+.card__front::before{
+    transform: rotate(-90deg);
+}
+
+.rotate-card{
+    transform: rotateY(180deg);
+    transition: transform .5s;
+}
+
+.reverse-card{
+    transform: rotateY(0);
+    transition: transform .5s;
+}

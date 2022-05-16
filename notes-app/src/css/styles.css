@@ -1,0 +1,121 @@
+*, *::after, *::before{ box-sizing: border-box; }
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+button{
+    padding: 0.25rem 1.2rem;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+}
+
+.title{
+    text-align: center;
+    color: #dc143c;
+}
+
+.form{
+    width: 90%;
+    height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.notes-container{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    text-align: center;
+}
+
+.note-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+.note-title{
+    text-transform: capitalize;
+}
+
+.text-important,
+.text-not-important{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text-important{
+    color: #0c970c;
+}
+
+.text-not-important{
+    color: #dc143c;
+}
+
+.btn-not-important{
+    background-color: #ecc3c3;
+    color: #dc143c;
+    border: 1px solid #dc143c;
+}
+
+.btn-important{
+    background-color: #c9e7c9;
+    color: #0c970c;
+    border: 1px solid #0c970c;
+}
+
+.btn-important,
+.btn-not-important{
+    cursor: pointer;
+}
+
+.btn-send{
+    border: none;
+    background-color: #575757;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.btn-update{
+    background-color: rgb(241, 241, 197);
+    color: rgb(139, 139, 48);
+    border: 1px solid yellow;
+}
+
+.btn-active{
+    background-color: #b6b6e2;
+    color: #0d0d29;
+    border: 1px solid #282869;
+    transition: background-color .3s, color .3s;
+}
+
+.btn-delete{
+    background-color: #d8bfd8;
+    color: #6e626e;
+    border: 1px solid #6e626e;
+}
+
+@media screen and (max-width: 500px) {
+    .notes-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

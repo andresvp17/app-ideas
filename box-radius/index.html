@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="wrapper">
+        <div class="bar-container">
+            <span draggable="true" id="bar-1" class="bar">
+                <span class="inside-bar top-left"></span>
+            </span>
+            <span draggable="true" id="bar-2" class="bar">
+                <span class="inside-bar top-right"></span>
+            </span>
+            <span draggable="true" id="bar-3" class="bar">
+                <span class="inside-bar bottom-left"></span>
+            </span>
+            <span draggable="true" id="bar-4" class="bar">
+                <span class="inside-bar bottom-right"></span>
+            </span>
+        </div>
+        <div id="box" class="box"></div>
+    </div>
+    <div class="form">
+        <textarea disabled id="text-area" cols="30" rows="10" wrap="soft"></textarea>
+        <button class="btn" id="button">Copy</button>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>

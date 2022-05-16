@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <title>Notes</title>
+</head>
+<body>
+    <h1 class="title">CREATE NOTES</h1>
+    <form class="form" id="form">
+        <div class="">
+            <label for="task">Remember To: </label>
+            <input type="text" id="input-note">
+        </div>
+        <div class="">
+            <label for="author">Written by: </label>
+            <input type="text" name="input-name" id="input-name">
+        </div>
+        <div id="buttons">
+            <button class="btn-important" id="important">Important</button>
+            <button class="btn-not-important" id="not-important">Not Important</button>
+        </div>
+        <button class="btn-send" id="write">Write!</button>
+    </form>
+    <div class="notes-container" id="notes-container"></div>
+    <script type="module" src="/src/js/scripts.js"></script>
+</body>
+</html>
